@@ -6,6 +6,24 @@
 
 }
 
-.hwTitle {
+.hwTitle {    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    max-width: 1110px;
+    padding: 0 15px;
+    padding-top: 131px;
+    margin: 0 auto;
+}
 
+.container {
+    max-width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.messagesBox {
+    border: 1px solid #D9D9D9;
 }
