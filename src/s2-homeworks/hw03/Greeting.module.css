@@ -1,35 +1,70 @@
-.greetingForm {
-}
+.greetingForm {}
 
-.inputAndButtonContainer {
-}
+.inputAndButtonContainer {}
 
 .error {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #CC0000;
 }
 
 .input {
+    margin-right: 12px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 7px;
 }
 
 .input:focus {
+    outline: none;
 }
 
 .errorInput {
+    margin-right: 12px;
+    border: 1px solid #CC0000;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 7px;
 }
 
 .button {
+    background: #0066CC;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 8px 24px;
+    height: 100%;
+    border: none;
 }
 
 .button:focus {
+
 }
 
-.button:active {
-}
+.button:active {}
 
 .button:disabled {
+    background: #0066CC;
+    opacity: 0.5;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 8px 24px;
+    height: 100%;
 }
 
 .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 9px;
 }
 
-.greeting {
+.greeting {}
+
+.inputWrapper {
+    display: flex;
 }
