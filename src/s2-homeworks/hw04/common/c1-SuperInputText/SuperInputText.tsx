@@ -25,7 +25,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     {
         onChange,
         onChangeText,
-        onKeyPress,
+        onKeyDown,
         onEnter,
         error,
         className,
@@ -40,8 +40,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
         onChangeText?.(e.currentTarget.value)
     }
-    const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
-        onKeyPress?.(e)
+    const onKeyDownCallback = (e: KeyboardEvent<HTMLInputElement>) => {
+        onKeyDown?.(e)
 
         onEnter && // если есть пропс onEnter
         e.key === 'Enter' && // и если нажата кнопка Enter
@@ -52,24 +52,24 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         + (spanClassName ? ' ' + spanClassName : '')
     const finalInputClassName = s.input
         + (error ? ' ' + s.errorInput : ' ' + s.superInput)
-        + (className ? ' ' + s.className : '') // задача на смешивание классов
+        + (id === 'hw4-super-input-like-old' ? ' ' + s.boxShadow : '') // задача на смешивание классов
 
     return (
         <div className={s.inputWrapper}>
-            <input
-                id={id}
-                type={'text'}
-                onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
-                className={finalInputClassName}
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
             <span
                 id={id ? id + '-span' : undefined}
                 className={finalSpanClassName}
             >
                 {error}
             </span>
+            <input
+                id={id}
+                type={'text'}
+                onChange={onChangeCallback}
+                onKeyDown={onKeyDownCallback}
+                className={finalInputClassName}
+                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+            />            
         </div>
     )
 }

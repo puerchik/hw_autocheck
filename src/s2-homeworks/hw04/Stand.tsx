@@ -56,8 +56,7 @@ const Stand = () => {
                 {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
-                        id={'hw4-super-button-disabled'}
-                        xType={'red'}
+                        id={'hw4-super-button-disabled'}                        
                         disabled
                     >
                         disabled
@@ -82,7 +81,7 @@ const Stand = () => {
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
                     >
-                        some text
+                        Hometask
                     </SuperCheckbox>
                 </div>
                 {/*совместим со старым кодом:*/}
