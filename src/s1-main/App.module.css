@@ -9,7 +9,6 @@
     line-height: 27px;
     color: #000000;
     max-width: 1110px;
-    padding: 0 15px;
     padding-top: 131px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -21,13 +20,20 @@
     margin: 0 auto;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+}
+
 .hw {
     padding-top: 90px;
     padding-bottom: 55px;
 }
 
 .messagesBox,
-.mainBox {
+.mainBox,
+.hw {
     border-top: 1px solid #D9D9D9;
     border-bottom: 1px solid #D9D9D9;
 }
