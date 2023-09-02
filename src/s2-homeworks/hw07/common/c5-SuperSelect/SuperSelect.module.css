@@ -1,9 +1,11 @@
 .select {
+    margin-right: 127px;
+    padding: 2px 100px 5px 10px;
+    border-radius: 2px;
+    border: 1px solid #C2C2C2;
 }
 
-.select:focus {
-}
+.select:focus {}
 
 
-.option:hover {
-}
+.option:hover {}

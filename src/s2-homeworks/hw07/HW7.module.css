@@ -1,2 +1,8 @@
 .container {
+    display: flex;
+    justify-content: start;
+}
+
+.title {
+    padding-top: 39px;
 }
