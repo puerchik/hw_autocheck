@@ -1,23 +1,61 @@
 .item {
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .item:last-of-type {
+    border: none;
 }
 
 .users {
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    margin-bottom: 18px;
+    width: 731px;
+    text-align: right;    
 }
 
 .container {
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 .thead {
+    width: 606px;
+    height: 36px;
+    background-color: #E5E5E5;
+}
+
+.nameCol,
+.ageCol {
+    margin-right: 0;
+    border-right: 0;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 11px 297px 11px 18px;
 }
 
 .nameCol {
+    padding: 11px 297px 11px 18px;
 }
 
 .ageCol {
+    padding-left: 0;
+}
+
+.names {
+    font-weight: 300;
+}
+
+.ages {
+    font-weight: 500;
+}
+
+.hwTitle {
+    padding-top: 35px;
 }
