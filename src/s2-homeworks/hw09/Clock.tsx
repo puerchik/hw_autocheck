@@ -23,11 +23,11 @@ function Clock() {
         setTimerId(undefined);
     }
 
-    const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+    const onMouseEnter = () => {
+        setShow(true);
     }
-    const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-
+    const onMouseLeave = () => {
+        setShow(false);
     }
 
     let formatterTime = new Intl.DateTimeFormat("en", {
@@ -94,14 +94,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={Boolean(timerId)} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!Boolean(timerId)} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
