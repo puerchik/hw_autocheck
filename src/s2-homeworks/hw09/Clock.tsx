@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import { restoreState } from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
+import s2 from '../../s1-main/App.module.css'
+
 
 function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
@@ -57,7 +59,7 @@ function Clock() {
     const stringMonth = formatterMonth.format(date);
 
     return (
-        <div className={s.clock}>
+        <div className={`${s.clock} ${s2.container}`}>
             <div
                 id={'hw9-watch'}
                 className={s.watch}
@@ -71,12 +73,6 @@ function Clock() {
             </div>
 
             <div id={'hw9-more'}>
-
-                <>
-                    <span id={'hw9-month'}>{stringMonth}</span>,{' '}
-                    <span id={'hw9-date'}>{stringDate}</span>
-                </>
-
                 <div className={s.more}>
                     {show ? (
                         <>
@@ -96,6 +92,7 @@ function Clock() {
                     id={'hw9-button-start'}
                     disabled={Boolean(timerId)} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
+                    xType=''
                 >
                     start
                 </SuperButton>
@@ -103,6 +100,7 @@ function Clock() {
                     id={'hw9-button-stop'}
                     disabled={!Boolean(timerId)} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
+                    xType=''
                 >
                     stop
                 </SuperButton>
