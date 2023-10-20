@@ -14,7 +14,6 @@ function Clock() {
     const start = () => {
         let id = setInterval(() => {
             setDate(new Date(restoreState('hw9-date', Date.now())))
-            console.log(id);
         }, 1000);
 
         setTimerId(Number(id));
