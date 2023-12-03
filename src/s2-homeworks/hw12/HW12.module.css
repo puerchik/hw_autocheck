@@ -19,5 +19,10 @@ html {
 }
 
 .select {
+    background-color: var(--background);
+    color: var(--color);
+}
 
+.title {
+    padding-top: 39px;
 }

@@ -34,17 +34,19 @@ const HW12 = () => {
 
     return (
         <div id={'hw12'}>
-            <div id={'hw12-text'} className={s2.hwTitle}>
+            <div id={'hw12-text'} className={`${s2.hwTitle} ${s.title}`}>
                 Homework #12
             </div>
 
             <div className={s2.hw}>
-                <SuperSelect
-                    id={'hw12-select-theme'}
-                    className={s.select}
-                    options={themes}
-                    onChangeOption={change}
-                />
+                <div className={s2.container}>
+                    <SuperSelect
+                        id={'hw12-select-theme'}
+                        className={s.select}
+                        options={themes}
+                        onChangeOption={change}
+                    />
+                </div>
             </div>
         </div>
     )
