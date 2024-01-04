@@ -38,28 +38,28 @@ const HW13 = () => {
             .then((res) => {
                 setCode("Код 200!");
                 setImage(success200);
-                setText(res.data.info);
-                setInfo(res.data.errorText);
+                setText(res.data.errorText);
+                setInfo(res.data.info);
                 setDisableButton(false);
             })
             .catch((e) => {
                 if (x === false) {
                     setCode("Ошибка 500!");
                     setImage(error500);
-                    setText(e.response.data.info);
-                    setInfo(e.response.data.errorText);
+                    setText(e.response.data.errorText);
+                    setInfo(e.response.data.info);
                     setDisableButton(false);
                 } else if (x === undefined) {
                     setCode("Ошибка 400!");
                     setImage(error400);
-                    setText(e.response.data.info);
-                    setInfo(e.response.data.errorText);
+                    setText(e.response.data.errorText);
+                    setInfo(e.response.data.info);
                     setDisableButton(false);
                 } else if (x === null) {
                     setCode("Error!");
                     setImage(errorUnknown);
-                    setText(e.name);
-                    setInfo(e.message);
+                    setText(e.message);
+                    setInfo(e.name);
                     setDisableButton(false);
                 }
             });
