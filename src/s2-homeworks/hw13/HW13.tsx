@@ -117,11 +117,11 @@ const HW13 = () => {
                             <div id={"hw13-code"} className={s.code}>
                                 {code}
                             </div>
-                            <div id={"hw13-info"} className={s.info}>
-                                {info}
-                            </div>
                             <div id={"hw13-text"} className={s.text}>
                                 {text}
+                            </div>
+                            <div id={"hw13-info"} className={s.info}>
+                                {info}
                             </div>
                         </div>
                     </div>
