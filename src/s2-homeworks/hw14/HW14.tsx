@@ -60,16 +60,17 @@ const HW14 = () => {
     return (
         <div id={"hw14"}>
             <div className={`${s2.hwTitle} ${s.title}`}>Homework #14</div>
+            <div className={s2.hw}>
+                <div className={`${s2.container}`}>
+                    <div className={`${s.wrapper} ${s.flex}`}>
+                        <SuperDebouncedInput id={"hw14-super-debounced-input"} value={find} onChangeText={onChangeText} onDebouncedChange={sendQuery} />
 
-            <div className={`${s2.hw} ${s2.container}`}>
-                <div className={`${s.wrapper} ${s.flex}`}>
-                    <SuperDebouncedInput id={"hw14-super-debounced-input"} value={find} onChangeText={onChangeText} onDebouncedChange={sendQuery} />
+                        <div id={"hw14-loading"} className={s.loading}>
+                            {isLoading ? "...ищем" : <br />}
+                        </div>
 
-                    <div id={"hw14-loading"} className={s.loading}>
-                        {isLoading ? "...ищем" : <br />}
+                        {mappedTechs}
                     </div>
-
-                    {mappedTechs}
                 </div>
             </div>
         </div>
