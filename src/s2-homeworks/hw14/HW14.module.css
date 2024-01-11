@@ -1,7 +1,25 @@
 .tech {
-
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .loading {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    align-self: flex-end;
+}
 
+.title {
+    padding-top: 0px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
 }
