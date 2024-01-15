@@ -1,11 +1,22 @@
 .pagination {
     display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.text1,
+.text2 {
+    color: var(--Neutral-Dark--80, #0d0b0c);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .text1 {
-
+    margin-right: 16px;
 }
 
-.text2 {
-
+.resetSelect {
+    margin-right: 5px;
 }
