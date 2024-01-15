@@ -24,7 +24,7 @@ export const pureChange = (sort: string, down: string, up: string) => {
         case up:
             return "";
         default:
-            return "";
+            return down;
     }
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
 };
