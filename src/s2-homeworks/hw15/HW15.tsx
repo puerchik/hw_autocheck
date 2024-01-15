@@ -71,8 +71,8 @@ const HW15 = () => {
     const onChangeSort = (newSort: string) => {
         setSort(newSort);
         setPage(1);
-        sendQuery({ page: 1, count: count });
-        setSearchParams({ page: "1", count: count.toString() });
+        sendQuery({ page: 1, count: count, sort: newSort });
+        setSearchParams({ page: "1", count: count.toString(), sort: newSort });
     };
 
     useEffect(() => {
@@ -82,22 +82,7 @@ const HW15 = () => {
         setCount(+params.count || 4);
     }, []);
 
-    const sortedUpTechs = [...techs].sort((a, b) => a.tech.localeCompare(b.tech));
-    const sortedDownTechs = [...techs].sort((a, b) => b.tech.localeCompare(a.tech));
-    const sortedUpDeveloper = [...techs].sort((a, b) => a.developer.localeCompare(b.developer));
-    const sortedDownDeveloper = [...techs].sort((a, b) => b.developer.localeCompare(a.developer));
-    const sortedArray =
-        sort === "1tech"
-            ? sortedDownTechs
-            : sort === "0tech"
-            ? sortedUpTechs
-            : sort === "1developer"
-            ? sortedDownDeveloper
-            : sort === "0developer"
-            ? sortedUpDeveloper
-            : techs;
-
-    const mappedTechs = sortedArray.map((t) => (
+    const mappedTechs = techs.map((t) => (
         <div key={t.id} className={s.row}>
             <div id={"hw15-tech-" + t.id} className={s.tech}>
                 {t.tech}
