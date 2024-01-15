@@ -69,8 +69,6 @@ const HW15 = () => {
     };
 
     const onChangeSort = (newSort: string) => {
-        console.log(newSort);
-
         setSort(newSort);
         setPage(1);
         sendQuery({ page: 1, count: count });
@@ -84,10 +82,10 @@ const HW15 = () => {
         setCount(+params.count || 4);
     }, []);
 
-    const sortedDownTechs = [...techs].sort((a, b) => a.tech.localeCompare(b.tech));
-    const sortedUpTechs = [...techs].sort((a, b) => b.tech.localeCompare(a.tech));
-    const sortedDownDeveloper = [...techs].sort((a, b) => a.developer.localeCompare(b.developer));
-    const sortedUpDeveloper = [...techs].sort((a, b) => b.developer.localeCompare(a.developer));
+    const sortedUpTechs = [...techs].sort((a, b) => a.tech.localeCompare(b.tech));
+    const sortedDownTechs = [...techs].sort((a, b) => b.tech.localeCompare(a.tech));
+    const sortedUpDeveloper = [...techs].sort((a, b) => a.developer.localeCompare(b.developer));
+    const sortedDownDeveloper = [...techs].sort((a, b) => b.developer.localeCompare(a.developer));
     const sortedArray =
         sort === "1tech"
             ? sortedDownTechs
